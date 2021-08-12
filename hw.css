@@ -1,0 +1,39 @@
+.book-section .card .card-body{
+    position: relative;
+}
+
+.fa-cart-plus{
+    position: absolute;
+    right: 2rem;
+    bottom: 1rem;
+    color: #1ECD4E;
+    text-shadow: 0 0 3px black
+}
+
+.fa-circle-notch{
+    color:red;
+    position: absolute;
+    right: 0.5rem;
+    bottom: 1rem;
+    text-shadow: 0 0 3px black
+
+}
+
+.hero-section .jumbotron{
+    background: rgb(112,139,231);
+    background: linear-gradient(180deg, rgba(112,139,231,1) 0%, rgba(247,112,3,1) 0%, rgba(54,28,21,1) 100%);
+}
+
+.card img{
+    object-fit:contain;
+}
+
+/* .jumbotron .container{
+    position: relative;
+}
+
+.jumbotron .fa-shopping-cart{
+    position: absolute;
+    right: 15px;
+    bottom: 215px;
+} */
