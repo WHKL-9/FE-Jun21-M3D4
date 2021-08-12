@@ -28,12 +28,11 @@
     object-fit:contain;
 }
 
-/* .jumbotron .container{
-    position: relative;
-}
+
 
 .jumbotron .fa-shopping-cart{
-    position: absolute;
-    right: 15px;
-    bottom: 215px;
-} */
+    /* position: absolute;
+    right: 10px;
+    bottom: -50px; */
+    color: white;
+}

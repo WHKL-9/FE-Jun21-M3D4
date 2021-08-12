@@ -22,21 +22,47 @@ function displayBooks(books){
     let getBookSection = document.querySelector(".book-section .row")
     books.forEach(book => {
         getBookSection.innerHTML += 
-        `<div class="col-12 col-sm-6 col-md-4 col-lg-2 mb-3" id="${book.asin}">
+        `<div class="col-12 col-sm-12 col-md-6 col-lg-4 mb-3 bookCard">
             <div class="card mx-1">
-            <img class="card-img-top" src="${book.img}" alt="Card image cap">
-            <div class="card-body">
-                <h5>${book.title}</h5>
-                <p class="card-text mb-0"><strong>Category: </strong> ${book.category}</p>
-                <p class="card-text"><strong>Price: </strong> ${book.price}€</p>
-                <i class="fas fa-cart-plus" onclick="addToCart(${book.asin})"></i>
-                <i class="fas fa-circle-notch"></i>            </div>
-        </div>
+                <img class="card-img-top" src="${book.img}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class>${book.title}</h5>
+                    <p class="card-text mb-0"><strong>Category: </strong> ${book.category}</p>
+                    <p class="card-text"><strong>Price: </strong> ${book.price}€</p>
+                    <button type="button" class="btn btn-warning removeThisBook" onclick="removeMe()">Remove</button>
+                    <i class="fas fa-cart-plus" onclick="addToCart(${book.title})"></i>
+                    <i class="fas fa-circle-notch"></i>            
+                </div>
+            </div>
         </div>`
     } )
 
 }
 
-function addToCart(){
-    let 
+
+// function addToCart(title){
+//     //get the booklist id
+//     let bookList = document.querySelector(`.${title}`)
+//     console.log(bookList)
+//     //target shopping list 
+//     // let getShoppingList = document.querySelector(".shopping-cart modal-body")
+//     // getShoppingList.appendChild(bookList)
+// }
+
+function removeMe(){
+    let getAllRemoveButton = document.querySelectorAll(".removeThisBook")
+    getAllRemoveButton.forEach((btn) => (btn.onclick = (event) =>{ 
+            event.currentTarget.closest(".bookCard").remove()
+        })
+    )
 }
+
+function AddMe(){
+    
+}
+
+
+    
+
+
+
