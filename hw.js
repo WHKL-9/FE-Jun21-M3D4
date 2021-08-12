@@ -26,12 +26,11 @@ function displayBooks(books){
             <div class="card mx-1">
                 <img class="card-img-top" src="${book.img}" alt="Card image cap">
                 <div class="card-body">
-                    <h5 class>${book.title}</h5>
+                    <h5 class="book-title">${book.title}</h5>
                     <p class="card-text mb-0"><strong>Category: </strong> ${book.category}</p>
                     <p class="card-text"><strong>Price: </strong> ${book.price}€</p>
-                    <button type="button" class="btn btn-warning removeThisBook" onclick="removeMe()">Remove</button>
-                    <i class="fas fa-cart-plus" onclick="addToCart(${book.title})"></i>
-                    <i class="fas fa-circle-notch"></i>            
+                    <button type="button" class="btn btn-success addThisBook" onclick="addMe()">Add to Cart</button>       
+                    <button type="button" class="btn btn-warning removeThisBook" onclick="removeMe()">Not Interested</button>
                 </div>
             </div>
         </div>`
@@ -57,8 +56,13 @@ function removeMe(){
     )
 }
 
-function AddMe(){
-    
+function addMe(){
+    let getShoppingList = document.querySelector(".modal-body")
+    let getAllCartButton = document.querySelectorAll(".addThisBook")
+    getAllCartButton.forEach((btn) => (btn.onclick= (event)=>{
+        console.log(event.currentTarget.closest(".book-title"))
+    })
+    )
 }
 
 
