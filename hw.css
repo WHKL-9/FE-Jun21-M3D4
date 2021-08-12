@@ -36,3 +36,9 @@
     bottom: -50px; */
     color: white;
 }
+
+.card-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
